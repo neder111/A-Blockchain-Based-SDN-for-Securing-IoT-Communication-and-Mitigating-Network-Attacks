@@ -1,7 +1,28 @@
 
-# SDN-Based IoT Security Framework using Blockchain and AI
+# A Blockchain-Based SDN for Securing IoT Communication and Mitigating Network Attacks
+## 🚀 Project Summary
 
-This project provides an SDN-based architecture to secure IoT communications using AI-based intrusion detection and blockchain for integrity. The environment includes Mininet, Ryu controller, Flask web apps, and MQTT/CoAP protocols for IoT data transfer.
+This project provides a **Blockchain-Enabled SDN-IoT Security Framework** that ensures **data integrity, availability, authentication**, and **attack resistance**.
+
+It leverages the Ryu SDN controller to provide the following security mechanisms:
+
+- ✅ **DDoS Prevention**: Limits packets per second for each MAC address.
+- 🔐 **ARP Spoofing Detection**: Maintains IP-MAC bindings and blocks spoofed ARP responses.
+- 🔁 **Replay Attack Detection**: Monitors and blocks inconsistent trusted flows.
+- 📜 **Smart Contract Enforcement**: Drops MQTT packets if:
+  - Temperature < 50 **and**
+  - Humidity < 30 or > 70
+- 🔗 **Blockchain Logging**: 
+  - Each verified packet is logged into a **blockchain block**.
+  - Metadata includes protocol, latency, IPs, ports, and timestamp.
+  - Blocks are cryptographically signed with **ECDSA** for immutability.
+
+### 📦 Technologies Used:
+- `Mininet` – for simulating SDN/IoT environments.
+- `Ryu Controller` – for flow control, monitoring, and security policy enforcement.
+- `MQTT / CoAP` – IoT communication protocols.
+- `Flask` – Web interface for visualization and interaction.
+- `Blockchain` – Immutable record of packet metadata for audit and trust.
 
 ---
 
