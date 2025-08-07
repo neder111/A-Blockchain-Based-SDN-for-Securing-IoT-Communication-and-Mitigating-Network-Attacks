@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Latest Packet Data Viewer</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f5f5f5; padding: 20px; }
+        .data-container { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 8px #aaa; max-width: 700px; margin: auto; }
+        h1 { text-align: center; }
+        pre { background: #eee; padding: 15px; border-radius: 6px; overflow-x: auto; font-size: 14px; }
+        .entry { margin-bottom: 30px; }
+        .entry-title { font-weight: bold; margin-bottom: 10px; }
+        p.no-data { text-align: center; color: #666; font-style: italic; }
+    </style>
+</head>
+<body>
+    <div class="data-container">
+        <h1>Latest Packet Data (SDN IoT Protocols)</h1>
+
+        {% if packets %}
+            {% for packet in packets %}
+                <div class="entry">
+                    <div class="entry-title">Data information #{{ loop.index }}</div>
+                    <pre>{{ packet | tojson(indent=2) }}</pre>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p class="no-data">No packet data available yet.</p>
+        {% endif %}
+    </div>
+</body>
+</html>
+

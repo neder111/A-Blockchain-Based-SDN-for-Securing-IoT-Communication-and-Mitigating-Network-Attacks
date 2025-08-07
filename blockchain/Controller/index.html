@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blockchain Viewer</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f5f5f5; padding: 20px; }
+        .block { background: white; padding: 15px; margin-bottom: 15px; border-radius: 8px; box-shadow: 0 0 5px #aaa; }
+        h3 { margin-top: 0; }
+        pre { background: #eee; padding: 10px; border-radius: 4px; overflow-x: auto; }
+    </style>
+</head>
+<body>
+    <h1>Blockchain Data (SDN IoT Protocols)</h1>
+    {% for block in chain %}
+    <div class="block">
+        <h3>Block #{{ block.index }}</h3>
+        <p><strong>Timestamp:</strong> {{ block.timestamp }}</p>
+        <p><strong>Data:</strong></p>
+        <pre>{{ block.data | tojson(indent=2) }}</pre>
+        <p><strong>Previous Hash:</strong> {{ block.previous_hash }}</p>
+        <p><strong>Signature:</strong> {{ block.signature[:40] }}...</p>
+        <p><strong>Hash:</strong> {{ block.hash }}</p>
+    </div>
+    {% else %}
+    <p>No blockchain data found.</p>
+    {% endfor %}
+</body>
+</html>
+
