@@ -127,7 +127,7 @@ mosquitto -v
 c. In `h1`, simulate IoT device publishing:
 ```bash
 while true; do 
-  mosquitto_pub -h 10.0.0.1 -p 1883 -t iot/dev1 -m "temp: $(shuf -i 25-30 -n 1) hum: $(shuf -i 50-90 -n 1)" 
+  mosquitto_pub -h 10.0.0.1 -p 1883 -t iot/dev1 -m "temp: $(shuf -i 15-35 -n 1) hum: $(shuf -i 30-70 -n 1)" 
   sleep 1
 done
 ```
