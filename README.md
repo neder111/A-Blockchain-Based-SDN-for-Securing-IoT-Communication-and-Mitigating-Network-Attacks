@@ -9,7 +9,7 @@ It leverages the Ryu SDN controller to provide the following security mechanisms
 - ✅ **DDoS Prevention**: Limits packets per second for each MAC address.
 - 🔐 **ARP Spoofing Detection**: Maintains IP-MAC bindings and blocks spoofed ARP responses.
 - 🔁 **Replay Attack Detection**: Monitors and blocks inconsistent trusted flows.
-- 📜 **Smart Contract Enforcement**: Drops MQTT packets if:
+- 📜 **Smart Contract Enforcement**: Drops MQTT/CoAP packets if:
   - Temperature > 50 **and**
   - Humidity < 30 or > 70
 - 🔗 **Blockchain Logging**: 
