@@ -126,7 +126,7 @@ ryu-manager --version
 
 3. Open a terminal in the `mininet` folder and run:
     ```bash
-    sudo python3 tt64.py
+    sudo python3 tm64.py
     ```
 
 ---
